@@ -32,10 +32,13 @@ main {
   max-width: 450px;
   min-width: 250px;
 }
+
+/*compose button that will display in the same line as the header */
 div.compose{
   display: inline;
 }
 
+/*positioning compose button */
 button.composeBtn{
   float: right;
   overflow: auto;
