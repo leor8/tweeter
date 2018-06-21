@@ -6,6 +6,8 @@
 
 $(function() {
 
+  // This function creates a section tag with a new tweet box inside. Including
+  // its header, content, footer and return that object
   function createTweetElement(tweetObject){
     let $tweet = $("<section>").addClass("newTweetBox");
     let returningHTML = "<div class=\"singleBox\"><header class=\"newTweetHeader\"><div class=\"imageContainer\">";
@@ -21,6 +23,9 @@ $(function() {
     return $tweet;
   }
 
+  // This render function takes in an array object and creates a div to contain
+  // everything. This function calls createTweetElement and prepend them to the
+  // whole html
   function renderTweets(tweetObjArr){
     let $div = $("<div></div>");
     tweetObjArr.forEach(element => {
@@ -28,14 +33,10 @@ $(function() {
     });
 
     $(".newTweetBox").html($div);
-
-
-    // for(let i = 0; i < tweetObjArr.length; i++){
-    //   let $div = createTweetElement(tweetObjArr[i]);
-    //   $(".newTweetBox").prepend($div);
-    // }
   }
 
+  // This function perform a ajax get request that upon sucess will render the current
+  // tweet
   function loadTweets () {
     $.ajax({
       url: '/tweets',
@@ -49,8 +50,10 @@ $(function() {
     });
    }
 
-   loadTweets();
+  loadTweets(); // Calling lodaTweets
 
+
+  // An on click event upon clicking
   $('input').on('click', function (event) {
     event.preventDefault();
 
