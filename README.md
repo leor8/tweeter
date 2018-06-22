@@ -18,3 +18,11 @@ This project is built on HTML, CSS, JavaScript, Ajax, Mongodb, moment.js, jquery
 - Node 5.10.x or above
 - Moment.js
 - Mongodb
+
+## Screenshots
+!["Screenshot of tweet whole page without compose box"](https://github.com/leor8/tweeter/blob/master/docs/WechatIMG695.jpeg?raw=true)
+!["Screenshot of tweet with compose box"](https://github.com/leor8/tweeter/blob/master/docs/WechatIMG694.jpeg?raw=true)
+
+
+
+
