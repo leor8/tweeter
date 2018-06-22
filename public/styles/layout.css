@@ -48,15 +48,16 @@ button.composeBtn{
   text-align: middle;
 }
 
-
+/*Setting borders colors positioning of each individual tweet*/
 div.singleBox {
   margin: 30px 20px 20px 20px;
   height: 250px;
   border-radius: 15px;
-  border: 1px solid black;
+  border: 1px solid rgb(220, 220, 220);
   overflow: auto;
 }
 
+/*Setting each tweet's border with color*/
 header.newTweetHeader {
   display: flex;
   height: 90px;
@@ -66,6 +67,7 @@ header.newTweetHeader {
   overflow: auto;
 }
 
+/*This is for image in each tweets' headers*/
 div.imageContainer {
   border-radius: 10px;
   margin: 17px 0px 9px 25px;
@@ -73,6 +75,7 @@ div.imageContainer {
   overflow: hidden;
 }
 
+/*Each tweet's username in header*/
 h2.newTweeth2 {
   margin: 15px 20px 20px 15px;
   width: 100px;
@@ -81,6 +84,7 @@ h2.newTweeth2 {
   text-overflow: ellipsis;
 }
 
+/*each tweet's user ID in header*/
 p.newTweetId {
   float: left;
   margin-top: 30px;
@@ -91,24 +95,28 @@ p.newTweetId {
   text-overflow: ellipsis;
 }
 
+/*box of content of each tweet*/
 article.newTweetArticle {
   border-bottom: 0.5px solid rgb(230, 230, 230);
   height: 40%;
   overflow: auto;
 }
 
+/*the actual content of each tweet*/
 p.newTweetContent {
   padding: 25px 50px 35px 10px;
   overflow: auto;
   overflow-wrap: break-word;
 }
 
+/*style for each tweet's posting time*/
 p.newTweetPostTime {
   float: left;
   overflow: auto;
   padding-left: 10px;
 }
 
+/*icons for like/retweet/flag*/
 div.hiddenIcons{
   display: none;
   margin-top: 15px;
@@ -117,12 +125,21 @@ div.hiddenIcons{
   overflow: auto;
 }
 
+/*Following three css is for hovering states*/
+
+/*display icons for like/retweet/flag*/
 div.singleBox:hover footer div{
   display: inline;
 }
 
+/*changing color of header of each tweet*/
 div.singleBox:hover header{
  background-color: rgb(220, 220, 220);
+}
+
+/*change color of each tweet's entire border*/
+div.singleBox:hover {
+  border: 1px solid black;
 }
 
 
