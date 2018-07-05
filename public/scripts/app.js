@@ -60,7 +60,7 @@ $(function() {
   $('input').on('click', function (event) {
     event.preventDefault();
 
-    if($("#newTweet").val().length > 0 || $("#newTweet").val().length < 140){
+    if($("#newTweet").val().length > 0 && $("#newTweet").val().length <== 140){
       let data = $('form').serialize();
       $.ajax('/tweets', {
         method: 'POST',
