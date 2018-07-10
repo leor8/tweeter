@@ -1,0 +1,218 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+main {
+  background-color: white;
+  margin: 80px auto;
+  padding-top: 10px;
+  max-width: 450px;
+  min-width: 250px;
+}
+
+/*compose button that will display in the same line as the header */
+div.compose {
+  display: inline;
+}
+
+/*positioning compose button */
+button.composeBtn {
+  float: right;
+  overflow: auto;
+  height: 60px;
+  width: 120px;
+  margin: 10px 0px 20px 0px;
+  text-align: middle;
+}
+
+/*Setting borders colors positioning of each individual tweet*/
+div.singleBox {
+  margin: 30px 20px 20px 20px;
+  height: 250px;
+  border-radius: 15px;
+  border: 1px solid gainsboro;
+  overflow: auto;
+}
+
+/*Setting each tweet's border with color*/
+header.newTweetHeader {
+  display: flex;
+  height: 90px;
+  width: 100%;
+  background-color: #e9e9e9;
+  border-radius: 15px 15px 0px 0px;
+  overflow: auto;
+}
+
+/*This is for image in each tweets' headers*/
+div.imageContainer {
+  border-radius: 10px;
+  margin: 17px 0px 9px 25px;
+  height: 52px;
+  overflow: hidden;
+}
+
+/*Each tweet's username in header*/
+h2.newTweeth2 {
+  margin: 15px 20px 20px 15px;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*each tweet's user ID in header*/
+p.newTweetId {
+  float: left;
+  margin-top: 30px;
+  margin-left: 120px;
+  color: #a0a0a0;
+  width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*box of content of each tweet*/
+article.newTweetArticle {
+  border-bottom: 0.5px solid #e6e6e6;
+  height: 40%;
+  overflow: auto;
+}
+
+/*the actual content of each tweet*/
+p.newTweetContent {
+  padding: 25px 50px 35px 10px;
+  overflow: auto;
+  overflow-wrap: break-word;
+}
+
+/*style for each tweet's posting time*/
+p.newTweetPostTime {
+  float: left;
+  overflow: auto;
+  padding-left: 10px;
+}
+
+/*icons for like/retweet/flag*/
+div.hiddenIcons {
+  display: none;
+  margin-top: 15px;
+  margin-right: 10px;
+  float: right;
+  overflow: auto;
+}
+
+fa-heart:hover {
+  color: red;
+}
+
+/*Following three css is for hovering states*/
+/*display icons for like/retweet/flag*/
+div.singleBox:hover footer div {
+  display: inline;
+}
+
+/*changing color of header of each tweet*/
+div.singleBox:hover header {
+  background-color: gainsboro;
+}
+
+/*change color of each tweet's entire border*/
+div.singleBox:hover {
+  border: 1px solid black;
+}
+
+fa-heart:hover {
+  color: red;
+}
+
+/*This file is responsible for textarea for getting user's new tweets*/
+/*Header h2 of "compose tweet"*/
+section > h2 {
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding: 10px 0px 2px 0px;
+  margin-top: 0px;
+}
+
+/*positioning the entire box*/
+section.new-tweet {
+  background-color: #e8e8e8;
+  padding: 0em 2em 1em 2em;
+  border-radius: 5px;
+  margin: 0px 20px 10px 20px;
+  height: 12rem;
+}
+
+/*positioning text area*/
+textarea {
+  height: 50px;
+  width: 100%;
+}
+
+/*positioning textcount*/
+span.counter {
+  float: right;
+  overflow: auto;
+}
+
+p.toggleMessage {
+  margin-top: 0.2rem;
+  color: rgb(232, 232, 232);
+}
+
+.newTweetFooter {
+  margin-top: 1rem;
+}
+
+/*Css for nav bar fixed on top of the page*/
+/*setting positioning and set it to be fixed on top of the scree*/
+#nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding: 0em 2em 0em 2em;
+}
+
+/*making logo stay on top*/
+#nav-bar .logo {
+  width: 80px;
+  height: 80px;
+  float: left;
+  overflow: auto;
+}
+
+#nav-bar .header {
+  padding-left: 10px;
+  font-size: 200%;
+  line-height: 75px;
+}
+
+/*# sourceMappingURL=styles.css.map */
