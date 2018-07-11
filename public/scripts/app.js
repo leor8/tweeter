@@ -61,12 +61,13 @@ $(function() {
     event.preventDefault();
 
     if($("#newTweet").val().length <= 0){
+      $(".toggleMessage").text("You did not enter anything.");
       $(".toggleMessage").css("color", "red");
     } else if ($("#newTweet").val().length > 140){
       $(".toggleMessage").css("color", "red");
       $(".toggleMessage").text("You have entered more then 140 characters.");
     } else {
-      $(".toggleMessage").css("color", "rgb(232, 232, 232)");
+      $(".toggleMessage").text("");
       let data = $('form').serialize();
       $.ajax('/tweets', {
         method: 'POST',
@@ -75,6 +76,7 @@ $(function() {
         $(".newTweetBox").load(loadTweets());
         $("form textarea").val("");
         $('section[id="toggle"]').hide();
+        $(".counter").text("140");
       });
     }
   });
